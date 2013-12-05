@@ -4,9 +4,10 @@ import org.pentaho.di.core.Const;
 import org.pentaho.di.core.database.BaseDatabaseMeta;
 import org.pentaho.di.core.database.DatabaseInterface;
 import org.pentaho.di.core.database.DatabaseMeta;
+import org.pentaho.di.core.plugins.DatabaseMetaPlugin;
 import org.pentaho.di.core.row.ValueMetaInterface;
 
-
+@DatabaseMetaPlugin(type = "csv", typeDescription = "CSV Files")
 public class CsvDatabaseMeta extends BaseDatabaseMeta implements DatabaseInterface {
   
   @Override
@@ -120,5 +121,4 @@ public class CsvDatabaseMeta extends BaseDatabaseMeta implements DatabaseInterfa
   public String[] getUsedLibraries() {
     return null;
   }
-  
 }
